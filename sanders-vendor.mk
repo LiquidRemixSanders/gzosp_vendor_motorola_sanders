@@ -1300,14 +1300,20 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar:system/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar \
     vendor/motorola/sanders/proprietary/vendor/etc/init/android.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@1.0-service.rc
 
-# DTV Libs
+# DTV
 PRODUCT_COPY_FILES += \
-    vendor/motorola/sanders/proprietary/etc/permissions/mot_dtv_permissions.xml:system/etc/permissions/mot_dtv_permissions.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.hardware.dtv.xml:system/etc/permissions/com.motorola.hardware.dtv.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/mot_dtv_permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/mot_dtv_permissions.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.hardware.dtv.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.hardware.dtv.xml \
     vendor/motorola/sanders/proprietary/vendor/lib/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvtuner.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libdtvtuner.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtvtuner.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdtvhal.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdtvhal.so:$(TARGET_COPY_OUT_VENDOR)lib64/libdtvhal.so \
+    vendor/motorola/sanders/proprietary/vendor/bin/hw/motorola.hardware.tv@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/motorola.hardware.tv@1.0-service \
+    vendor/motorola/sanders/proprietary/vendor/etc/init/motorola.hardware.tv@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/motorola.hardware.tv@1.0-service.rc \
+    vendor/motorola/sanders/proprietary/vendor/lib/hw/motorola.hardware.tv@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/motorola.hardware.tv@1.0-impl.so \
+    vendor/motorola/sanders/proprietary/vendor/lib/motorola.hardware.tv@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/motorola.hardware.tv@1.0.so \
+    vendor/motorola/sanders/proprietary/vendor/lib/motorola.hardware.tv@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/motorola.hardware.tv@1.0_vendor.so \
+    vendor/motorola/sanders/proprietary/vendor/lib64/hw/motorola.hardware.tv@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/motorola.hardware.tv@1.0-impl.so \
+    vendor/motorola/sanders/proprietary/vendor/lib64/motorola.hardware.tv@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/motorola.hardware.tv@1.0.so \
+    vendor/motorola/sanders/proprietary/vendor/lib64/motorola.hardware.tv@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/motorola.hardware.tv@1.0_vendor.so
 
 PRODUCT_PACKAGES += \
     libqct_resampler \
@@ -1341,6 +1347,8 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentTGoogleCS47L35 \
     HotwordEnrollmentXGoogleCS47L35 \
     QtiTelephonyService \
-    CNEService
+    CNEService \
+    DTVPlayer \
+    DTVService
 
 
